@@ -1,0 +1,155 @@
+.container-head {
+    width: 100%;
+    background-color: #235A97;
+    position: fixed;
+    z-index: 1;
+}
+
+.container-head p {
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.container-head-settings {
+    width: 100%;
+    background-color: #235A97;
+    position: fixed;
+    margin-top: -100px;
+    z-index: 1;
+}
+
+.container-head-settings p {
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.container-head-lower {
+    width: 100%;
+    background-color: #235A97;
+    position: fixed;
+    z-index: 1;
+}
+
+.container-head-lower p {
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.gallery-item img {
+    width: 200px;
+    height: auto;
+    margin: 20px;
+}
+
+.img-section {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+}
+
+.navbar {
+    margin-bottom: -20px;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar i {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.active-icon i {
+    color: #235A97;
+}
+
+.active-icon p {
+    color: #235A97;
+}
+
+.nav-icons-bottom {
+    margin-top: 10px;
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(5%) contrast(0%);
+}
+
+.all-img {
+    margin-top: 75px;
+}
+
+.navbar a {
+    color: #949494;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+    color: #235A97;
+}
+
+.settingsUL{
+    margin-right: 35px;
+}
+
+.settings-content .card-body {
+    padding: 15px;
+}
+
+.settings-content .cardInnerText {
+    padding-top: 5px;
+    color: #FFFFFF;
+}
+
+.settings-content .card {
+    background-color: #235A97;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.settings-content .card-text i {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.settings-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+.settings-active-icon-bottom {
+    margin-top: 10px;
+    filter: invert(28%) sepia(13%) saturate(9107%) hue-rotate(200deg) brightness(45%) contrast(80%);
+}
+
+.back-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-header i {
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.back-header span {
+    padding-left: 20px;
+    padding-right: 0px;
+}
+
+.back-header-text {
+    color: #262626;
+    display: block;
+    flex-grow: 1;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
