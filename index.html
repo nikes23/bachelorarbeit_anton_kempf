@@ -175,5 +175,15 @@
         document.getElementById("settingsIcon").style.filter = "invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(5%) contrast(0%)";
         document.getElementById("settingsParagraph").style.color = "#949494";
     });
+
+    var a=document.getElementsByTagName("a");
+    for(var i=0;i<a.length;i++)
+    {
+        a[i].onclick=function()
+        {
+            window.location=this.getAttribute("href");
+            return false
+        }
+    }
 </script>
 </html>
