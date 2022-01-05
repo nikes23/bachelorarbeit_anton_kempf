@@ -55,7 +55,7 @@
     </ul>
 </nav>
 
-<div class="container-head-settings">
+<div class="container-head fixed-top">
     <p style="color: white" class="text-center centered-text">Settings</p>
 </div>
 
@@ -162,12 +162,10 @@
 </div>
 </body>
 <script>
-    var a=document.getElementsByTagName("a");
-    for(var i=0;i<a.length;i++)
-    {
-        a[i].onclick=function()
-        {
-            window.location=this.getAttribute("href");
+    var a = document.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        a[i].onclick = function () {
+            window.location = this.getAttribute("href");
             return false
         }
     }

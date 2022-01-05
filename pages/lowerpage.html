@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<div class="container-head-lower back-header">
+<div class="container-head fixed-top back-header">
     <a href="settings.html">
         <span>
             <i class="fas fa-angle-left"></i>
@@ -43,12 +43,10 @@
 </div>
 </body>
 <script>
-    var a=document.getElementsByTagName("a");
-    for(var i=0;i<a.length;i++)
-    {
-        a[i].onclick=function()
-        {
-            window.location=this.getAttribute("href");
+    var a = document.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        a[i].onclick = function () {
+            window.location = this.getAttribute("href");
             return false
         }
     }

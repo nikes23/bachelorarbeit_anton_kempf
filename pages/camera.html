@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<div class="container-head" style="display: inline-block;">
+<div class="container-head fixed-top">
     <p style="color: white" class="text-center centered-text">Camera</p>
 </div>
 
@@ -59,14 +59,21 @@
     </ul>
 </nav>
 
-<div style="display: flex; width: 90%;margin-left: auto;margin-right: auto;">
+<div style="display: block; width: 90%;margin-left: auto;margin-right: auto;">
     <div class="text-center" style="margin-top: 100px;width: 90%;margin-left:auto;margin-right:auto;">
         <img src="../assets/images/thi_logo.png" id="thi-logo" width="200" height="200"/>
         <img id="selectImage" src="#" alt="your image" style="display: none"/>
-        <input type="file" accept="image/*" capture="camera" onchange="readURL(this);"
-               style="width: 80%; margin-left:auto; margin-right: auto;margin-top:50px;"/>
     </div>
 </div>
+<div style="display: block; width: 90%;margin-left: auto;margin-right: auto;">
+    <div class="text-center" style="margin-top: 100px;width: 90%;margin-left:auto;margin-right:auto;">
+        <input type="file" accept="image/*" capture="camera" onchange="readURL(this);"/>
+    </div>
+    <div class="text-center" style="margin-top: 10px;width: 90%;margin-left:auto;margin-right:auto;">
+        <input type="file" accept="image/png,image/jpeg">
+    </div>
+</div>
+
 </body>
 
 <script>
@@ -80,12 +87,10 @@
         document.getElementById("settingsParagraph").style.color = "#949494";
     });
 
-    var a=document.getElementsByTagName("a");
-    for(var i=0;i<a.length;i++)
-    {
-        a[i].onclick=function()
-        {
-            window.location=this.getAttribute("href");
+    var a = document.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        a[i].onclick = function () {
+            window.location = this.getAttribute("href");
             return false
         }
     }

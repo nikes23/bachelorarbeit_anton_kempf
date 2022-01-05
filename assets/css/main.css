@@ -1,38 +1,10 @@
 .container-head {
     width: 100%;
     background-color: #235A97;
-    position: fixed;
     z-index: 1;
 }
 
 .container-head p {
-    font-size: 20px;
-    padding-top: 25px;
-    padding-bottom: 15px;
-}
-
-.container-head-settings {
-    width: 100%;
-    background-color: #235A97;
-    position: fixed;
-    margin-top: -100px;
-    z-index: 1;
-}
-
-.container-head-settings p {
-    font-size: 20px;
-    padding-top: 25px;
-    padding-bottom: 15px;
-}
-
-.container-head-lower {
-    width: 100%;
-    background-color: #235A97;
-    position: fixed;
-    z-index: 1;
-}
-
-.container-head-lower p {
     font-size: 20px;
     padding-top: 25px;
     padding-bottom: 15px;

@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<div class="container-head">
+<div class="container-head fixed-top">
     <p style="color: white" class="text-center centered-text">Images</p>
 </div>
 
@@ -176,12 +176,10 @@
         document.getElementById("settingsParagraph").style.color = "#949494";
     });
 
-    var a=document.getElementsByTagName("a");
-    for(var i=0;i<a.length;i++)
-    {
-        a[i].onclick=function()
-        {
-            window.location=this.getAttribute("href");
+    var a = document.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        a[i].onclick = function () {
+            window.location = this.getAttribute("href");
             return false
         }
     }
