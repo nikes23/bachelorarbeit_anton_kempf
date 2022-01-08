@@ -134,3 +134,58 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.input-file-container {
+    position: relative;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.js .input-file-trigger {
+    display: block;
+    padding: 14px 45px;
+    background: #235A97;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.js .input-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 225px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+}
+
+.js .input-file:hover + .input-file-trigger,
+.js .input-file:focus + .input-file-trigger,
+.js .input-file-trigger:hover,
+.js .input-file-trigger:focus {
+    background: #153f6e;
+    color: #FFFFFF;
+}
+
+.cameraIconButton {
+    font-size: 15px;
+}
+
+.lastCameraButton {
+    margin-bottom: 100px;
+}
+
+.firstCameraButton {
+    margin-top: 100px;
+}
+
+.thiLogo {
+    margin-top: 200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -32,51 +32,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        .input-file-container {
-            position: relative;
-            width: 225px;
-        }
-        .js .input-file-trigger {
-            display: block;
-            padding: 14px 45px;
-            background: #39D2B4;
-            color: #fff;
-            font-size: 1em;
-            transition: all .4s;
-            cursor: pointer;
-        }
-        .js .input-file {
-            position: absolute;
-            top: 0; left: 0;
-            width: 225px;
-            opacity: 0;
-            padding: 14px 0;
-            cursor: pointer;
-        }
-        .js .input-file:hover + .input-file-trigger,
-        .js .input-file:focus + .input-file-trigger,
-        .js .input-file-trigger:hover,
-        .js .input-file-trigger:focus {
-            background: #34495E;
-            color: #39D2B4;
-        }
-
-        .file-return {
-            margin: 0;
-        }
-        .file-return:not(:empty) {
-            margin: 1em 0;
-        }
-        .js .file-return {
-            font-style: italic;
-            font-size: .9em;
-            font-weight: bold;
-        }
-        .js .file-return:not(:empty):before {
-            content: "Selected file: ";
-            font-style: normal;
-            font-weight: normal;
-        }
 
     </style>
 </head>
@@ -106,30 +61,26 @@
         </a>
     </ul>
 </nav>
-<div style="display: block; width: 90%;margin-left: auto;margin-right: auto;">
-    <div class="text-center" style="margin-top: 100px;width: 90%;margin-left:auto;margin-right:auto;">
+<div>
+    <div class="text-center thiLogo">
         <img src="../assets/images/thi_logo.png" id="thi-logo" width="200" height="200"/>
         <img id="selectImage" src="#" alt="your image" style="display: none"/>
     </div>
 </div>
 <div style="display: block; width: 90%;margin-left: auto;margin-right: auto;">
-    <div class="text-center" style="margin-top: 100px;width: 90%;margin-left:auto;margin-right:auto;">
-        <input type="file" accept="image/*" capture="camera" onchange="readURL(this);"/>
+    <div class="text-center input-file-container firstCameraButton">
+        <input type="file" accept="image/*" capture="camera" onchange="readURL(this);" class="input-file" id="camera"/>
+        <label tabindex="0" for="camera" class="input-file-trigger">
+            <span class="float-left cameraIconButton"><i class="fa fa-camera fa-lg"></i></span>
+            <span>Camera</span>
+        </label>
     </div>
-    <div class="text-center" style="margin-top: 10px;width: 90%;margin-left:auto;margin-right:auto;">
-        <input type="file" accept="image/*">
-    </div>
-    <div class="text-center input-file-container" style="margin-top: 10px;width: 90%;margin-left:auto;margin-right:auto;">
-        <!--<input type="file" accept="image/*" class="input-file" id="my-file">
-        <label tabindex="0" for="my-file" class="input-file-trigger">Gallery</label>-->
-        <input type="file" accept="image/*" capture="camera" onchange="readURL(this);" class="input-file" id="my-file"/>
-        <label tabindex="1" for="my-file" class="input-file-trigger">Camera</label>
-
-    </div>
-    <div class="text-center input-file-container" style="margin-top: 10px;width: 90%;margin-left:auto;margin-right:auto;">
-        <input type="file" accept="image/*" capture="camera" onchange="readURL(this);" class="input-file" id="my-file2"/>
-        <label tabindex="1" for="my-file2" class="input-file-trigger">Camera</label>
-
+    <div class="text-center input-file-container lastCameraButton">
+        <input type="file" accept="image/*" class="input-file" id="gallery" onchange="readURL(this);">
+        <label tabindex="1" for="gallery" class="input-file-trigger">
+            <span class="float-left cameraIconButton"><i class="fa fa-image fa-lg"></i></span>
+            <span>Gallery</span>
+        </label>
     </div>
 </div>
 
@@ -173,20 +124,20 @@
 
     document.querySelector("html").classList.add('js');
 
-    var fileInput  = document.querySelector( ".input-file" ),
-        button     = document.querySelector( ".input-file-trigger" ),
+    var fileInput = document.querySelector(".input-file"),
+        button = document.querySelector(".input-file-trigger"),
         the_return = document.querySelector(".file-return");
 
-    button.addEventListener( "keydown", function( event ) {
-        if ( event.keyCode == 13 || event.keyCode == 32 ) {
+    button.addEventListener("keydown", function (event) {
+        if (event.keyCode == 13 || event.keyCode == 32) {
             fileInput.focus();
         }
     });
-    button.addEventListener( "click", function( event ) {
+    button.addEventListener("click", function (event) {
         fileInput.focus();
         return false;
     });
-    fileInput.addEventListener( "change", function( event ) {
+    fileInput.addEventListener("change", function (event) {
         the_return.innerHTML = this.value;
     });
 </script>
